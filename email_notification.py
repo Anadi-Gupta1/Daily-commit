@@ -9,8 +9,8 @@ from datetime import datetime
 
 # Configuration
 RECIPIENT_EMAIL = "anadigupta55555@gmail.com"
-SENDER_EMAIL = "github.streak.notifier@gmail.com"  # You'll need to set up this account
-SENDER_PASSWORD = "YOUR_APP_PASSWORD_HERE"  # Use an app password, not your regular password
+SENDER_EMAIL = "anadigupta55555@gmail.com"  # You'll need to set up this account
+SENDER_PASSWORD = "2024"  # Use an app password, not your regular password
 
 def send_email(subject, message_body, success=True):
     """Send an email notification about GitHub commits"""

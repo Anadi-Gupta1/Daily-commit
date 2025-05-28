@@ -4,7 +4,7 @@
 REPO_PATH="/mnt/c/Users/DELL/Desktop/AWS/github-streak"
 GITHUB_EMAIL="anadigupta55555@gmail.com"
 GITHUB_USERNAME="Anadi-Gupta1"
-GITHUB_TOKEN="YOUR_GITHUB_TOKEN_HERE"  # Replace with your actual token
+GITHUB_TOKEN="tthel"  # Replace with your actual token
 COMMITS_PER_DAY=20  # Number of commits to make at midnight
 NOTIFICATION_EMAIL="anadigupta55555@gmail.com"  # Email to send notifications to
 
@@ -87,6 +87,8 @@ done
 echo "Pushing all commits to GitHub..." >> "$LOG_FILE"
 git push origin main || {
     echo "Failed to push commits to GitHub" >> "$LOG_FILE"
+    python3 "$REPO_PATH/email_notification.py" failure "$COMMITS_PER_DAY" || echo "Failed to send email notification"
+    python3 "$REPO_PATH/email_notification.py" failure "$COMMITS_PER_DAY" || echo "Failed to send email notification"
     
     # Send failure notification via the Python script if available
     if [ -f "$REPO_PATH/email_notification.py" ]; then
@@ -98,6 +100,12 @@ git push origin main || {
 
 echo "All $COMMITS_PER_DAY commits pushed successfully at $(date)" >> "$LOG_FILE"
 echo "===== Midnight Commit Process Completed =====" >> "$LOG_FILE"
+
+# Send email notification
+python3 "$REPO_PATH/email_notification.py" success "$COMMITS_PER_DAY" || echo "Failed to send email notification"
+
+# Send email notification
+python3 "$REPO_PATH/email_notification.py" success "$COMMITS_PER_DAY" || echo "Failed to send email notification"
 
 # Send success notification via the Python script if available
 if [ -f "$REPO_PATH/email_notification.py" ]; then

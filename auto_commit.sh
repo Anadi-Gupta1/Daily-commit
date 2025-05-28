@@ -4,7 +4,7 @@
 REPO_PATH="/mnt/c/Users/DELL/Desktop/AWS/github-streak"
 GITHUB_EMAIL="anadigupta55555@gmail.com"  # Your GitHub email
 GITHUB_USERNAME="Anadi-Gupta1"
-GITHUB_TOKEN="YOUR_GITHUB_TOKEN_HERE"  # Replace with your actual token
+GITHUB_TOKEN="tthel"  # Replace with your actual token
 COMMITS_PER_DAY=${COMMITS_PER_DAY:-5}  # Default to 5 commits if not specified
 
 # Navigate to repository
