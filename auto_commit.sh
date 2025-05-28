@@ -5,7 +5,7 @@ REPO_PATH="/mnt/c/Users/DELL/Desktop/AWS/github-streak"
 GITHUB_EMAIL="anadigupta55555@gmail.com"  # Your GitHub email
 GITHUB_USERNAME="Anadi-Gupta1"
 GITHUB_TOKEN="YOUR_GITHUB_TOKEN_HERE"  # Replace with your actual token
-COMMITS_PER_DAY=20  # Number of commits for better visibility
+COMMITS_PER_DAY=${COMMITS_PER_DAY:-5}  # Default to 5 commits if not specified
 
 # Navigate to repository
 cd $REPO_PATH || exit 1
@@ -16,6 +16,9 @@ git remote set-url origin "https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/$GI
 # Configure git with the correct email
 git config user.email "$GITHUB_EMAIL"
 git config user.name "$GITHUB_USERNAME"
+
+# Pull latest changes to avoid conflicts
+git pull origin main
 
 # Function to make a single commit
 make_commit() {
