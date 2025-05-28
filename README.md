@@ -1,15 +1,14 @@
 # GitHub Streak Automation
 
-This repository contains scripts to automatically maintain your GitHub contribution streak by making regular commits throughout the day.
+This repository contains scripts to automatically maintain your GitHub contribution streak by making regular commits at midnight every day.
 
 ## How It Works
 
 The automation system consists of several scripts that work together:
 
-1. **setup_automation.sh**: The main setup script that configures everything
-2. **auto_commit.sh**: Makes a specified number of commits to the repository
-3. **multi_commit_schedule.sh**: Schedules commits throughout the day
-4. **update_token.sh**: Updates your GitHub token in all scripts when needed
+1. **midnight_commit.sh**: Makes all commits at once at midnight
+2. **setup_midnight_cron.sh**: Sets up the cron job to run at midnight
+3. **update_token.sh**: Updates your GitHub token in all scripts when needed
 
 ## Setup Instructions
 
@@ -18,15 +17,15 @@ The automation system consists of several scripts that work together:
 3. Run the setup script:
 
 ```bash
-./setup_automation.sh
+./setup_midnight_cron.sh
 ```
 
 4. Enter your GitHub token when prompted
-5. The automation will start immediately with an initial batch of commits
+5. The automation will run every day at midnight (12:00 AM)
 
 ## Features
 
-- Makes multiple commits distributed throughout the day
+- Makes all commits (20 by default) at once at midnight
 - Automatically runs daily via cron job
 - Creates unique files for each commit to ensure they appear on your contribution graph
 - Handles authentication securely
@@ -34,7 +33,7 @@ The automation system consists of several scripts that work together:
 
 ## Customization
 
-You can customize the number of commits and timing by editing the `multi_commit_schedule.sh` script.
+You can customize the number of commits by editing the `COMMITS_PER_DAY` variable in the `midnight_commit.sh` script.
 
 ## Troubleshooting
 
