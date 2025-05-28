@@ -13,11 +13,18 @@ fi
 
 echo "Updating GitHub token in all scripts..."
 
-# Update token in auto_commit.sh
-sed -i "s/GITHUB_TOKEN=\"[^\"]*\"/GITHUB_TOKEN=\"$NEW_TOKEN\"/" /mnt/c/Users/DELL/Desktop/AWS/github-streak/auto_commit.sh
+# Update token in midnight_commit.sh
+sed -i "s/GITHUB_TOKEN=\"[^\"]*\"/GITHUB_TOKEN=\"$NEW_TOKEN\"/" /mnt/c/Users/DELL/Desktop/AWS/github-streak/midnight_commit.sh
 
-# Update token in push_with_token.sh
-sed -i "s|https://Anadi-Gupta1:[^@]*@github.com|https://Anadi-Gupta1:$NEW_TOKEN@github.com|" /mnt/c/Users/DELL/Desktop/AWS/github-streak/push_with_token.sh
+# Update token in auto_commit.sh if it exists
+if [ -f "/mnt/c/Users/DELL/Desktop/AWS/github-streak/auto_commit.sh" ]; then
+    sed -i "s/GITHUB_TOKEN=\"[^\"]*\"/GITHUB_TOKEN=\"$NEW_TOKEN\"/" /mnt/c/Users/DELL/Desktop/AWS/github-streak/auto_commit.sh
+fi
+
+# Update token in push_with_token.sh if it exists
+if [ -f "/mnt/c/Users/DELL/Desktop/AWS/github-streak/push_with_token.sh" ]; then
+    sed -i "s|https://Anadi-Gupta1:[^@]*@github.com|https://Anadi-Gupta1:$NEW_TOKEN@github.com|" /mnt/c/Users/DELL/Desktop/AWS/github-streak/push_with_token.sh
+fi
 
 echo "Token updated successfully in all scripts."
 echo "Testing authentication..."
