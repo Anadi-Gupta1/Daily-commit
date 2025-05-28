@@ -1,0 +1,16 @@
+To push your commits to GitHub and see the green blocks, you need to run this command:
+
+git push -u origin main
+
+When prompted, enter:
+- Username: Anadi-Gupta1
+- Password: Your GitHub personal access token (the one you shared earlier)
+
+After pushing, visit your GitHub profile at:
+https://github.com/Anadi-Gupta1
+
+You should see green contribution blocks for today.
+
+Note: If you don't see the green blocks immediately, it may take a few minutes for GitHub to update your contribution graph.
+
+Important: Make sure your email "anadigupta55555@gmail.com" is verified on GitHub.
