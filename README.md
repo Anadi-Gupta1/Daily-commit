@@ -1,76 +1,21 @@
-# GitHub Streak Automation
+# GitHub Streak Repository
 
-This repository contains scripts to automatically maintain your GitHub contribution streak by making regular commits at midnight every day.
+This repository is used to maintain a GitHub contribution streak.
 
-## How It Works
+## Last Updated
+- Date: Wed May 28 19:15:49 UTC 2025
+- Random Value: 10908
 
-The automation system consists of several scripts that work together:
+## Contribution Count
+This repository contains multiple commits to ensure GitHub contribution activity.
 
-1. **midnight_commit.sh**: Makes all commits at once at midnight
-2. **setup_midnight_cron.sh**: Sets up the cron job to run at midnight
-3. **update_token.sh**: Updates your GitHub token in all scripts when needed
+## Important Links
+- [GitHub Profile](https://github.com/Anadi-Gupta1)
+- [GitHub Contribution Settings](https://github.com/settings/profile)
+- [GitHub Email Settings](https://github.com/settings/emails)
 
-## Setup Instructions
-
-1. Clone this repository to your local machine
-2. Generate a GitHub Personal Access Token with repo permissions
-3. Run the setup script:
-
-```bash
-./setup_midnight_cron.sh
-```
-
-4. Enter your GitHub token when prompted
-5. The automation will run every day at midnight (12:00 AM)
-
-## Features
-
-- Makes all commits (20 by default) at once at midnight
-- Automatically runs daily via cron job
-- Creates unique files for each commit to ensure they appear on your contribution graph
-- Handles authentication securely
-- Logs all activities for monitoring
-
-## Email Notifications
-
-The system includes email notifications to keep you informed about your GitHub streak:
-
-1. When commits are successfully pushed, you'll receive a confirmation email
-2. If there's any issue with the commits, you'll receive an alert email
-
-To set up email notifications:
-
-```bash
-./setup_email_notification.sh
-```
-
-You'll need to provide:
-- A Gmail account to send notifications from
-- An App Password for that Gmail account (not your regular password)
-
-The notifications will be sent to: anadigupta55555@gmail.com
-
-## Customization
-
-You can customize the number of commits by editing the `COMMITS_PER_DAY` variable in the `midnight_commit.sh` script.
-
-## Troubleshooting
-
-If commits stop appearing on your GitHub profile:
-
-1. Check the log files in the repository
-2. Verify your GitHub token is still valid
-3. Run `./update_token.sh` to update your token if needed
-4. Check that the cron job is still active with `crontab -l`
-
-## Maintenance
-
-The system is designed to run without intervention, but you should:
-
-- Periodically check the logs to ensure everything is working
-- Update your GitHub token if you receive authentication errors
-- Consider updating the scripts if GitHub changes their API or policies
-
-## License
-
-This project is for educational purposes only. Use responsibly and in accordance with GitHub's terms of service.
+## Verification
+To verify your contributions are being counted:
+1. Check your GitHub profile
+2. Look for green squares in the contribution graph
+3. If no contributions appear, verify your email settings
