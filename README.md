@@ -31,9 +31,24 @@ The automation system consists of several scripts that work together:
 - Handles authentication securely
 - Logs all activities for monitoring
 
-## Customization
+## Email Notifications
 
-You can customize the number of commits by editing the `COMMITS_PER_DAY` variable in the `midnight_commit.sh` script.
+The system now includes email notifications to keep you informed about your GitHub streak:
+
+1. When commits are successfully pushed, you'll receive a confirmation email
+2. If there's any issue with the commits, you'll receive an alert email
+
+To set up email notifications:
+
+```bash
+./setup_email_notification.sh
+```
+
+You'll need to provide:
+- A Gmail account to send notifications from
+- An App Password for that Gmail account (not your regular password)
+
+The notifications will be sent to: anadigupta55555@gmail.com
 
 ## Troubleshooting
 
